@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ext": ".ts,.js",
   "ignore": [],
-  "exec": "tsx src/index.ts",
+  "exec": "node --nolazy -r ts-node/register src/index.ts",
   "events": {
     "restart": "echo '\n> Server restarted\n'"
   }

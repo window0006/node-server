@@ -1,17 +1,17 @@
 import { Context } from 'koa';
-import { customAlphabet } from 'nanoid';
+import crypto from 'crypto';
 
 const REQUEST_ID_KEY = 'X-Request-Id';
-const SERVICE_NAME = process.env.SERVICE_NAME || 'ssg';
-const nanoid = customAlphabet('1234567890abcdef', 16);
+const SERVICE_NAME = process.env.SERVICE_NAME || 'nss-ssg-server';
 
 /**
  * 生成请求 ID
- * 格式: {SERVICE_NAME}-{timestamp}-{random}
- * 例如: ssg-1684481234567-a1b2c3d4e5f6
+ * 格式: {SERVICE_NAME}-{uuid}
+ * 例如: ssg-550e8400-e29b-41d4-a716-446655440000
+ * @returns 唯一的请求 ID
  */
 export function generateRequestId(): string {
-  return `${SERVICE_NAME}-${Date.now()}-${nanoid()}`;
+  return `${SERVICE_NAME}-${crypto.randomUUID()}`;
 }
 
 /**
