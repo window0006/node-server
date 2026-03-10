@@ -1,6 +1,6 @@
-# SSG Server
+# Node Server
 
-静态站点生成服务器，基于 Koa + TypeScript 构建。
+通用 Node 服务，基于 Koa + TypeScript 构建。
 
 ## 项目结构
 

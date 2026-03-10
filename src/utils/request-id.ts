@@ -2,7 +2,7 @@ import { Context } from 'koa';
 import crypto from 'crypto';
 
 const REQUEST_ID_KEY = 'X-Request-Id';
-const SERVICE_NAME = process.env.SERVICE_NAME || 'nss-ssg-server';
+const SERVICE_NAME = process.env.SERVICE_NAME || 'node-server';
 
 /**
  * 生成请求 ID

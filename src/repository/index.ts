@@ -1,1 +1,1 @@
-// todo connect to database
+// repository exports removed with SSG logic
